@@ -41,6 +41,10 @@ O desde GitHub:
 yarn add github:dvyer/Baileys
 ```
 
+Compatibilidad:
+
+- Tambien soporta imports heredados de `@whiskeysockets/baileys` mediante alias automatico en instalacion.
+
 ## Inicio Rapido
 
 ```js
