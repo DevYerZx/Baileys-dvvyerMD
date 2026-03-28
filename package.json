@@ -52,7 +52,7 @@
     "lodash": "^4.17.21",
     "unfurl.js": "^6.4.0",
     "lru-cache": "^11.1.0",
-    "music-metadata": "^7.12.3",
+    "music-metadata": "^11.12.3",
     "pino": "^9.6",
     "protobufjs": "^7.2.4",
     "qrcode-terminal": "^0.12.0",
