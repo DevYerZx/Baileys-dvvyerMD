@@ -71,6 +71,46 @@ async function startBot() {
 startBot()
 ```
 
+## Modo Estable (Auto-Reconexion)
+
+```js
+const {
+  makeWASocketWithReconnect,
+  useMultiFileAuthState
+} = require('@dvyer/baileys')
+
+async function startStableBot() {
+  const { state, saveCreds } = await useMultiFileAuthState('./auth_info_dvyer')
+
+  const supervisor = makeWASocketWithReconnect(
+    {
+      auth: state,
+      printQRInTerminal: true
+    },
+    {
+      maxRetries: Infinity,
+      initialDelayMs: 1500,
+      maxDelayMs: 30000
+    }
+  )
+
+  supervisor.ev.on('socket.created', ({ socket }) => {
+    socket.ev.on('creds.update', saveCreds)
+  })
+}
+```
+
+## Guardias Globales de Errores
+
+```js
+const { installGlobalProcessGuards } = require('@dvyer/baileys')
+
+installGlobalProcessGuards({
+  logger: console,
+  exitOnException: false
+})
+```
+
 ## Pairing Code (Verificacion)
 
 Este fork viene configurado para usar por defecto el codigo:

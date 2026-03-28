@@ -31,11 +31,11 @@
     "changelog:last": "conventional-changelog -p angular -r 2",
     "changelog:preview": "conventional-changelog -p angular -u",
     "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "lint": "eslint src --ext .js,.ts",
+    "lint": "eslint lib tests --ext .js --max-warnings=0",
     "lint:fix": "yarn lint --fix",
     "preinstall": "node ./engine-requirements.js",
     "release": "release-it",
-    "test": "jest"
+    "test": "jest --config jest.config.cjs --runInBand"
   },
 
   "dependencies": {
