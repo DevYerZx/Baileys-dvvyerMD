@@ -1,3 +1,10 @@
+//BASE ORGINAL DE Itsukiiiii
+//(https://github.com/Itsukichann/Baileys)
+//dv yer mejorando algunas cosas 
+//hola si van a usar este mi repositorio para su bot no borrar los creditos.
+
+
+
 <div align="center">
 
 # DVYER WA CORE
